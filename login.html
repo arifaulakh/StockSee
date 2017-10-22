@@ -52,13 +52,6 @@
         const password = document.getElementById("password");
         const login = document.getElementById("login");
 
-        function(error {
-              // Handle Errors here.
-              var errorCode = error.code;
-              var errorMessage = error.message;
-              // ...
-            });
-
         // Add login event
         login.addEventListener('click', e => {
 
@@ -68,7 +61,7 @@
 
             // Error catches
 
-            promise.catch(function(error));
+            promise.catch(e => console.log(e.message);
 
         })
 
