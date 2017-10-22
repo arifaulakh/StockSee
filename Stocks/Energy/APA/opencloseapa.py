@@ -1,5 +1,5 @@
 import csv
-import matplotlib
+import matplotlib.pyplot as plt
 from matplotlib import style
 
 style.use('ggplot')
@@ -26,13 +26,18 @@ for i in range(1, length-1):
 
 av = float(diff/length)
 
+days = []
 first = close2[length-1]
 futureclose = [first]
 for i in range(1, 366):
     a = first+ i*av
     futureclose.append(a)
-print(futureclose)
+for i in range(1, 366):
+    days.append(i)
 
+
+print(days)
+print(futureclose)
 
 
 
