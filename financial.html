@@ -42,9 +42,22 @@
 
 	</head>
 
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCivT6EaUUroaaGQWlDDAiLB1NwfpqQ-v8",
+	    authDomain: "stockseeing.firebaseapp.com",
+	    databaseURL: "https://stockseeing.firebaseio.com",
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
   	<script>
 
+  		function subscribe() {
 
+  		}
 
   	</script>
 
@@ -217,13 +230,14 @@
 	          		<ul class="navbar-nav ml-auto">
 	            		<li class="nav-item">
 	              			<a class="nav-link" href="index.html">Home
+	                			
 	              			</a>
 	            		</li>
 	            		<li class="nav-item">
-	              			<a class="nav-link" href="predictions.html">Popular Predictions</a>
+	              			<a class="nav-link" href="predictions.html">Popular Predictions </a>
 	           		 	</li>
 	            		<li class="nav-item active">
-	              			<a class="nav-link" href="search.html">Search<span class="sr-only">(current)</span></a>
+	              			<a class="nav-link" href="search.html">Search</a>
 	            		</li>
 	            		<li class="nav-item">
 	              			<a class="nav-link" href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up </a>
@@ -235,17 +249,6 @@
 	        	</div>
 	      	</div>
     	</nav>
-
-    	<div class="container">
-	        		<div class="row">
-	        	      	<form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-  </div>
-</div>
 
     <!-- Header with Background Image -->
     <header class="business-header">
@@ -267,68 +270,45 @@
 
       	<div class="row">
         	<div class="col-sm-8">
-          		<h2 class="mt-4" style="font-size:20px">Categories</h2>
-         		<p style = "font-size: 16px">Check out data from our main stock categories: Financial, Energy, Technology, and Healthcare</p><br>
+                <h2 class="mt-4" style="font-size:20px"><b>GS</b></h2>
+                <h3>Historical</h3>
+         		<object type="image/svg+xml" data="Stocks/Financial/GS/gs.svg"></object>
+                <h3>Prediction</h3>
+                <object type="image/svg+xml" data="Stocks/Financial/GS/gspredict.svg"></object>
                 
-            		
           		
         	</div>
-      <!-- /.row -->
 
-	      	<div class="row">
-	        	<div class="col-sm-4 my-4">
-	          		<div class="card">
-	            		<img class="card-img-top" src="http://tsgi.ca/wp-content/uploads/2017/02/AdobeStock_45974605.jpeg" alt="">
-	            			<div class="card-body">
-	              				<h4 class="card-title">Energy</h4>
-	              				
-	            			</div>
-	            			<div class="card-footer">
-	              				<a href="energy.html" class="btn btn-primary">Find Out More!</a>
-	            			</div>
-	          		</div>
-	        	</div>
-	        	<div class="col-sm-4 my-4">
-	          		<div class="card">
-	            		<img class="card-img-top" src="http://www.hec.edu/var/corporate/storage/images/knowledge/finance-et-comptabilite/marches-financiers/le-role-de-la-vitesse-sur-les-marches-financiers/743476-1-eng-GB/The-Role-of-Speed-in-Today-s-Financial-Markets_knowledge_standard.jpg" alt="">
-	            			<div class="card-body">
-	              				<h4 class="card-title">Financial</h4>
-	              				
-	            			</div>
-	            			<div class="card-footer">
-	              				<a href="financial.html" class="btn btn-primary">Find Out More!</a>
-	            			</div>
-	          		</div>
-	        	</div>
-	        	<div class="col-sm-4 my-4">
-	          		<div class="card">
-	            		<img class="card-img-top" src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAZ3AAAAJDRiZWNmMGZhLTcyNTEtNDRkYi04MDViLTcyMDdkZGJlMzc1ZQ.jpg" alt="">
-	            			<div class="card-body">
-	              				<h4 class="card-title">Healthcare</h4>
-	              				
-	            			</div>
-	            			<div class="card-footer">
-	              				<a href="healthcare.html" class="btn btn-primary">Find Out More!</a>
-	            			</div>
-	          		</div>
-	        	</div>
-                <div class="col-sm-4 my-4">
-	          		<div class="card">
-	            		<img class="card-img-top" src="http://www.volarisgroup.com/img/blog/20_quotes_from_tech.jpg" alt="">
-	            			<div class="card-body">
-	              				<h4 class="card-title">Technology</h4>
-	            			</div>
-	            			<div class="card-footer">
-	              				<a href="technology.html" class="btn btn-primary">Find Out More!</a>
-	            			</div>
-	          		</div>
-	        	</div>
-
-	      	</div>
-	      <!-- /.row -->
 
 	    </div>
-	    <!-- /.container -->
+        <div class="row">
+        	<div class="col-sm-8">
+                <h2 class="mt-4" style="font-size:20px"><b>JPM</b></h2>
+                <h3>Historical</h3>
+         		<object type="image/svg+xml" data="Stocks/Financial/JPM/jpm.svg"></object>
+                <h3>Prediction</h3>
+                <object type="image/svg+xml" data="Stocks/Financial/JPM/jpmpredict.svg"></object>
+                
+          		
+        	</div>
+
+
+	    </div>
+        <div class="row">
+        	<div class="col-sm-8">
+                <h2 class="mt-4" style="font-size:20px; font-weight: bold"><b>BX</b></h2>
+                <h3>Historical</h3>
+         		<object type="image/svg+xml" data="Stocks/Financial/BX/bx.svg"></object>
+                <h3>Prediction</h3>
+                <object type="image/svg+xml" data="Stocks/Financial/BX/bxpredict.svg"></object>
+                
+          		
+        	</div>
+
+
+	    </div>
+        
+
 
 	    <!-- Bootstrap core JavaScript -->
 	    <script src="vendor/jquery/jquery.min.js"></script>
@@ -340,7 +320,7 @@
 	    <div class="footer" id="footer">
 	        <div class="container">
 	            <div class="row">
-	                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6" >
+	           		<div class="col-lg-2  col-md-2 col-sm-4 col-xs-6" >
 	                    <br>
 	                    <br>
 	                    <br>
@@ -354,7 +334,7 @@
 	                    <h3> Site Menu </h3>
 	                    <ul>
 	                        <li> <a href="index.html"> Home </a> </li>
-	                        <li> <a href="predicitons.html"> Popular Predictions </a> </li>
+	                        <li> <a href="predictions.html"> Popular Predictions </a> </li>
 	                        <li> <a href="search.html"> Search </a> </li>
 	                        <li> <a href="register.html"> Become a Member!</a> </li>
 	                    </ul>
