@@ -11,14 +11,14 @@ style.use ('ggplot')
 start = dt.datetime(2001, 1, 1)
 end = dt.datetime(2016,12, 31)
 
-df = web.DataReader('FB','yahoo',start,end)
-df.to_csv('fb.csv')
+df = web.DataReader('GOOG','yahoo',start,end)
+df.to_csv('goog.csv')
 
 df=pd.read_csv('fb.csv',parse_dates=True, index_col=0)
 print(df[['Open','High']])
 
 df['Open'].plot()
-plt.savefig('fb.svg')
+plt.savefig('goog.svg')
 
 df['100ma']=df['Adj Close'].rolling(window=100, min_periods=0).mean()
 df.dropna(inplace=True)
