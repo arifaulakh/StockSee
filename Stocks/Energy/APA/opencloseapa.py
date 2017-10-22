@@ -1,6 +1,8 @@
 import csv
 import matplotlib.pyplot as plt
 from matplotlib import style
+import datetime as dt
+import matplotlib.dates as mdates
 
 style.use('ggplot')
 
@@ -35,10 +37,14 @@ for i in range(1, 366):
 for i in range(1, 366):
     days.append(i)
 
+dates = ['01/01/2017','12/31/2017']
+x = [dt.datetime.strptime(d,'%m/%d/%Y').date() for d in dates]
+y = futureclose[len(futureclose)-1]
 
-print(days)
-print(futureclose)
-
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%Y'))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+plt.plot(x,y)
+plt.savefig('apa.svg')
 
 
 
