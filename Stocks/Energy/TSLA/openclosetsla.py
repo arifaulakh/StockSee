@@ -1,6 +1,8 @@
 import csv
-import matplotlib
+from matplotlib import pyplot as plt
 from matplotlib import style
+import datetime as dt
+import matplotlib.dates as mdates
 
 style.use('ggplot')
 
@@ -26,12 +28,20 @@ for i in range(1, length-1):
 
 av = float(diff/length)
 
+days = []
 first = close2[length-1]
 futureclose = [first]
-for i in range(1, 366):
+for i in range(1, 365):
     a = first+ i*av
     futureclose.append(a)
-print(futureclose)
+for i in range(1, 366):
+    days.append(i)
+
+days[0] = 0
+futureclose[0]
+plt.plot(days,futureclose)
+plt.savefig('tslapredict.svg')
+
 
 
 

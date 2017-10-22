@@ -1,5 +1,5 @@
 import csv
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from matplotlib import style
 import datetime as dt
 import matplotlib.dates as mdates
@@ -29,22 +29,23 @@ for i in range(1, length-1):
 av = float(diff/length)
 
 days = []
+
 first = close2[length-1]
 futureclose = [first]
-for i in range(1, 366):
+for i in range(1, 365):
     a = first+ i*av
     futureclose.append(a)
 for i in range(1, 366):
     days.append(i)
 
-dates = ['01/01/2017','12/31/2017']
-x = [dt.datetime.strptime(d,'%m/%d/%Y').date() for d in dates]
-y = futureclose[len(futureclose)-1]
+days[0] = 0
+futureclose[0]
+plt.plot(days,futureclose)
+plt.savefig('apapredict.svg')
 
-plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%Y'))
-plt.gca().xaxis.set_major_locator(mdates.DayLocator())
-plt.plot(x,y)
-plt.savefig('apa.svg')
+
+
+
 
 
 

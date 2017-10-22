@@ -18,7 +18,7 @@ df=pd.read_csv('jpm.csv',parse_dates=True, index_col=0)
 print(df[['Open','High']])
 
 df['Open'].plot()
-plt.savefig('jpm.svg')
+plt.savefig('jpminit.svg')
 
 df['100ma']=df['Adj Close'].rolling(window=100, min_periods=0).mean()
 df.dropna(inplace=True)
