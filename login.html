@@ -34,6 +34,25 @@
 
     </head>
 
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCivT6EaUUroaaGQWlDDAiLB1NwfpqQ-v8",
+        authDomain: "stockseeing.firebaseapp.com",
+        databaseURL: "https://stockseeing.firebaseio.com",
+        };
+        firebase.initializeApp(config);
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          var log = "Sign Out";
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // ...
+        });
+
+    </script>
+
     <body>
 
         <!-- Top content -->
@@ -62,12 +81,12 @@
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="email">Email</label>
+			                        	<input type="text" name="email" placeholder="Email..." class="form-username form-control" id="email">
 			                        </div>
 			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        	<label class="sr-only" for="password">Password</label>
+			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
 			                        </div>
 			                        <button type="submit" class="btn">Sign in!</button>
 			                    </form>

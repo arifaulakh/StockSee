@@ -34,6 +34,27 @@
 
     </head>
 
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCivT6EaUUroaaGQWlDDAiLB1NwfpqQ-v8",
+	    authDomain: "stockseeing.firebaseapp.com",
+	    databaseURL: "https://stockseeing.firebaseio.com",
+	  };
+	  firebase.initializeApp(config);
+
+	  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // ...
+	});
+
+	</script>
+
+
+
     <body>
 
         <!-- Top content -->
@@ -53,7 +74,7 @@
                         	<div class="form-top">
                         		<div class="form-top-left">
                         			<h3>Sign up for our platform</h3>
-                            		<p>Enter your username, email, and password:</p>
+                            		<p>Enter your email and password:</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-key"></i>
@@ -61,21 +82,13 @@
                             </div>
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        <div class="form-group">
+			                    		<label class="sr-only" for="email">Email</label>
+			                        	<input type="text" name="email" placeholder="Email..." class="form-username form-control" id="email">
 			                        </div>
 			                        <div class="form-group">
-			                    		<label class="sr-only" for="form-username">Email</label>
-			                        	<input type="text" name="form-username" placeholder="Email..." class="form-username form-control" id="form-email">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Confirm Password</label>
-			                        	<input type="password" name="form-password" placeholder="Confirm Password..." class="form-password form-control" id="form-confirmpassword">
+			                        	<label class="sr-only" for="password">Password</label>
+			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
 			                        </div>
 			                        <button type="submit" class="btn">Sign Up!</button>
 			                    </form>
