@@ -42,22 +42,22 @@
 
 	</head>
 
-	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-	    apiKey: "AIzaSyCivT6EaUUroaaGQWlDDAiLB1NwfpqQ-v8",
-	    authDomain: "stockseeing.firebaseapp.com",
-	    databaseURL: "https://stockseeing.firebaseio.com",
-	  };
-	  firebase.initializeApp(config);
-	</script>
-
   	<script>
 
-  		function subscribe() {
+  		const logout = document.getElementById("logout");
 
-  		}
+  		// Event listener
+  		logout.addEventListener('click', e => {
+
+  			firebase.auth().signOut();
+
+  		})
+
+  		firebase.auth().onAuthStateChanged(firebaseUser => { 
+            if(firebaseUser) {
+                logout.classList.remove('hide');
+            }
+        });
 
   	</script>
 
@@ -244,6 +244,9 @@
 	            		</li>
 	            		<li class="nav-item">
 	              			<a class="nav-link" href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login </a>
+	            		</li>
+	            		<li class="nav-item hide">
+	            			<a class="nav-link" href="login.html" id="logout">Logout </a>
 	            		</li>
 	          		</ul>
 	        	</div>

@@ -41,14 +41,28 @@
         apiKey: "AIzaSyCivT6EaUUroaaGQWlDDAiLB1NwfpqQ-v8",
         authDomain: "stockseeing.firebaseapp.com",
         databaseURL: "https://stockseeing.firebaseio.com",
+        projectId: "stockseeing",
+        storageBucket: "stockseeing.appspot.com",
+        messagingSenderId: "26546986941"
         };
         firebase.initializeApp(config);
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          var log = "Sign Out";
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // ...
+
+        // Get elements
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const login = document.getElementById("login");
+
+        // Add login event
+        login.addEventListener('click', e => {
+
+            const email = email.value;
+            const password = password.value;
+            const promise = firebase.auth().signInWithEmailAndPassword(email, password);
+
+            // Error catches
+
+            promise.catch(e => console.log(e.message));
+
         });
 
     </script>
@@ -88,7 +102,7 @@
 			                        	<label class="sr-only" for="password">Password</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="password">
 			                        </div>
-			                        <button type="submit" class="btn">Sign in!</button>
+			                        <button type="submit" class="btn" id="login">Sign in!</button>
 			                    </form>
 		                    </div>
                         </div>
@@ -97,13 +111,13 @@
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3>...or login with:</h3>
                         	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="www.facebook.com">
 	                        		<i class="fa fa-facebook"></i> Facebook
 	                        	</a>
-	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
+	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="www.twitter.com">
 	                        		<i class="fa fa-twitter"></i> Twitter
 	                        	</a>
-	                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+	                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="www.gmail.com">
 	                        		<i class="fa fa-google"></i> Google
 	                        	</a>
                         	</div>
