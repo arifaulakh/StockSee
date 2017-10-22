@@ -54,7 +54,7 @@
 
 	  // Add sign-up event listener
 
-	  signup.addEventListener('click', e => {
+	  function signUp() {
 
 	  	    const email = email.value;
             const password = password.value;
@@ -64,7 +64,7 @@
 
             //promise.catch(e => console.log(e.message));
 
-	  });
+	  };
 
 	</script>
 
@@ -105,7 +105,7 @@
 			                        	<label class="sr-only" for="password">Password</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="validate form-password form-control" id="password">
 			                        </div>
-			                        <button type="submit" class="btn" id="sign-up">Sign Up!</button>
+			                        <button type="submit" class="btn" onclick="signUp()" id="sign-up">Sign Up!</button>
 			                    </form>
 		                    </div>
                         </div>

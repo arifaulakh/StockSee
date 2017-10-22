@@ -53,7 +53,7 @@
         const login = document.getElementById("login");
 
         // Add login event
-        login.addEventListener('click', e => {
+        function onLogin() {
 
             const email = email.value;
             const password = password.value;
@@ -61,9 +61,9 @@
 
             // Error catches
 
-            promise.catch(e => console.log(e.message));
+            //promise.catch(e => console.log(e.message));
 
-        });
+        };
 
     </script>
 
@@ -102,7 +102,7 @@
 			                        	<label class="sr-only" for="password">Password</label>
 			                        	<input type="password" name="password" placeholder="Password..." class="validate form-password form-control" id="password">
 			                        </div>
-			                        <button type="submit" class="btn" id="login">Sign in!</button>
+			                        <button type="submit" onclick="onLogin()" class="btn" id="login">Sign in!</button>
 			                    </form>
 		                    </div>
                         </div>
